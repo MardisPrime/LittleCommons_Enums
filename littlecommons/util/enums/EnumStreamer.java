@@ -22,7 +22,7 @@ import java.util.Set;
 import java.util.stream.Stream;
 
 /**
- * Supports repeated streaming of an enum's values without repeated array
+ * An EnumStreamer supports repeated streaming of an enum's values without repeated array
  * creation via Enum.values().
  *
  * @author Simon Greening Christian
@@ -55,19 +55,19 @@ public final class EnumStreamer<E extends Enum<E>> {
     }
 
     /**
-     * A stream of the constants for the supported enum in the order that they
+     * A stream of the values for the supported enum in the order that they
      * were declared.
      *
-     * @return a stream of the constants for the supported enum
+     * @return a stream of the values for the supported enum
      */
     public Stream<E> stream() {
         return iAllOf.stream();
     }
 
     /**
-     * A parallel stream of the constants for the supported enum.
+     * A parallel stream of the values for the supported enum.
      *
-     * @return a parallel stream of the constants for the supported enum
+     * @return a parallel stream of the values for the supported enum
      */
     public Stream<E> parallelStream() {
         return iAllOf.parallelStream();
